@@ -80,4 +80,3 @@ python src/retriv.py -k "laptop" -n 5 --all-star-types --star-limit-per-type 3
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
-```
