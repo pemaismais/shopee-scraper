@@ -7,7 +7,7 @@ This Python application scrapes product data from Shopee. It retrieves basic pro
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/shopee-scraper.git
+   git clone https://github.com/dtungpka/shopee-scraper.git
    cd shopee-scraper
    ```
 
