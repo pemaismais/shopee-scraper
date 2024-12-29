@@ -1,0 +1,9 @@
+undetected-chromedriver
+selenium
+tqdm
+argparse
+json
+pickle
+logging
+re
+datetime
