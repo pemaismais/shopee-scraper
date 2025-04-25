@@ -2,3 +2,5 @@ cookies_shopee.dat
 logs/
 resources/
 venv/
+.vscode
+__pycache__

@@ -38,13 +38,13 @@ Before running:
 
 1.  **Scraping by Keyword (Multiple Products):**
     ```bash
-    python src/retriv.py -k "your_search_term" -n 10 -r 30
+    python main.py -k "your_search_term" -n 10 -r 30
     ```
     This command searches for "your_search_term" and attempts to retrieve basic information and up to 30 reviews for the first 10 products found.
 
 2.  **Scraping by Product Link (Single Product):**
     ```bash
-    python src/retriv.py -l "<shopee_product_url>" -r 50
+    python main.py -l "<shopee_product_url>" -r 50
     ```
     This command directly scrapes detailed information and up to 50 reviews from the specified product page. The `-n` argument is ignored in this mode.
     *(Replace `<shopee_product_url>` with the actual product link)*
@@ -54,28 +54,28 @@ Before running:
 1.  **Review Limit Mode:**
     *   Use `-r` or `--review-limit` to set the maximum number of reviews to collect per product:
         ```bash
-        python src/retriv.py -k "smartphone" -n 3 -r 20
+        python main.py -k "smartphone" -n 3 -r 20
         ```
         This collects up to 20 reviews per product for the first 3 products found in the "smartphone" search.
 
 2.  **All-Star Types Mode:**
     *   Combine `--all-star-types` with `--star-limit-per-type` to retrieve a specific number of reviews for each star rating (5-star, 4-star, etc.):
         ```bash
-        python src/retriv.py -k "smartwatch" -n 2 --all-star-types --star-limit-per-type 5
+        python main.py -k "smartwatch" -n 2 --all-star-types --star-limit-per-type 5
         ```
         This collects 5 reviews for each star rating (5 to 1) for the first 2 smartwatches found. This mode cannot be used with `--media-only`.
 
 3.  **Media Only Mode:**
     *   Use `--media-only` to retrieve only reviews that contain images or videos:
         ```bash
-        python src/retriv.py -l "<shopee_product_url>" --media-only -r 15
+        python main.py -l "<shopee_product_url>" --media-only -r 15
         ```
         This collects up to 15 reviews with media from the specified product link. This mode cannot be used with `--all-star-types`.
 
 4.  **Continue Scraping (Single Product Link):**
     *   Use `-c` or `--continue-scrape` to resume scraping reviews from the last saved page for a specific product link. This is useful if the scraping was interrupted:
         ```bash
-        python src/retriv.py -l "<shopee_product_url>" -r 100 -c
+        python main.py -l "<shopee_product_url>" -r 100 -c
         ```
         This attempts to continue scraping up to 100 reviews for the specified product.
 
@@ -97,17 +97,17 @@ Before running:
 
 *   **Scrape basic info and 20 reviews for the first 5 results of "gaming mouse":**
     ```bash
-    python src/retriv.py -k "gaming mouse" -n 5 -r 20
+    python main.py -k "gaming mouse" -n 5 -r 20
     ```
 
 *   **Scrape detailed info and up to 50 reviews with media only from a specific product link:**
     ```bash
-    python src/retriv.py -l "<shopee_product_url>" --media-only -r 50
+    python main.py -l "<shopee_product_url>" --media-only -r 50
     ```
 
 *   **Scrape detailed info and 3 reviews for each star rating from a specific product link:**
     ```bash
-    python src/retriv.py -l "<shopee_product_url>" --all-star-types --star-limit-per-type 3 -r 15
+    python main.py -l "<shopee_product_url>" --all-star-types --star-limit-per-type 3 -r 15
     ```
     *(Remember to replace `<shopee_product_url>` with actual links in the examples)*
 
